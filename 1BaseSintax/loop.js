@@ -1,6 +1,5 @@
 'use strict';
 
-const INTERVAL =1000;
 const MAX_VALUE = 10;
 
 console.log('Begin');
