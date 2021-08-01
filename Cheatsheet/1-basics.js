@@ -2,9 +2,11 @@
 
 // Contants
 
-const SALUTATION = 'Ave';
+const SALUTATION = 'Ave'; // Приветствие
 
-const COLORS = [
+// Объявляем цвета
+
+const COLORS = [ 
   /* 1 */'black',
   /* 2 */'red',
   /* 3 */'green',
@@ -17,14 +19,16 @@ const COLORS = [
 
 // Functions
 
-const colorer = (s, color) => `\x1b[3${color}m${s}\x1b[0m`;
+const colorer = (s, color) => `\x1b[3${color}m${s}\x1b[0m`; // сложная функция
 
-const colorize = name => {
-  let res = '';
-  const letters = name.split('');
+const colorize = z => {
+  // Переменная, куда записывается результат
+  let res = ''; 
+  const letters = z.split('');
   let color = 1;
-  for (const letter of letters) {
-    res += colorer(letter, color++);
+  // Пробегаемся по цветам и сплитим
+  for (const x of letters) {
+    res += colorer(x, color++);
     if (color > COLORS.length) 
       color = 1;
   }
